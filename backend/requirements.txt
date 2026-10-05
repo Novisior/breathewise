@@ -1,0 +1,7 @@
+# Backend dependencies. No AI SDK needed: Gemini/Groq/etc. are called with httpx.
+fastapi>=0.110
+uvicorn>=0.29        # the server that runs FastAPI
+httpx>=0.27          # HTTP client for Open-Meteo and the AI provider
+pydantic>=2.6        # data validation / response models
+python-dotenv>=1.0   # loads backend/.env
+pytest>=8.0          # tests
