@@ -1,4 +1,4 @@
-"""Orchestrates advice: cache -> Claude (if available) -> safety checks -> rules fallback."""
+
 import logging
 import time
 
@@ -60,7 +60,7 @@ async def get_advice(req: AdviceRequest) -> dict:
 
     return {
         **core,
-        "disclaimer": rules.DISCLAIMER[ctx["language"]],  # always added by code
+        "disclaimer": rules.DISCLAIMER[ctx["language"]],  
         "source": source,
         "language": ctx["language"],
         "fallback_reason": reason if source == "rules" else None,
