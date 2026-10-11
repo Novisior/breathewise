@@ -77,7 +77,7 @@ How advice works:
 ## Tests
 
 ```
-cd backend && pytest          # AQI maths, advice rules, safety layer, API (mocked upstream)
+cd backend && pytest          # AQI maths, advice rules, safety layer, API
 cd frontend && npm test       # best-time planner and past-hour filtering
 ```
 
