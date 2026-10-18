@@ -1,29 +1,4 @@
-"""
-aqi.py - Indian AQI (CPCB National AQI) calculator.
 
-Pure Python: no third-party imports, so it is easy to test and reason about.
-
-HOW THE INDIAN AQI WORKS
-  1. For each pollutant, convert its (averaged) concentration into a
-     "sub-index" (0-500) by linear interpolation inside a breakpoint band.
-  2. The overall AQI is the MAXIMUM sub-index. The pollutant that produces
-     it is the "dominant pollutant".
-  3. Averaging periods used by CPCB: PM2.5, PM10, NO2, SO2 -> 24 hours;
-     O3 and CO -> 8 hours. Open-Meteo gives hourly values, so we compute
-     trailing averages (see `aqi_at`).
-  4. CPCB needs at least 3 pollutants, one of them PM2.5 or PM10.
-
-UNITS: ug/m3 for everything EXCEPT CO, which is mg/m3.
-
-!!! BREAKPOINT TABLE SOURCE / PLEASE VERIFY !!!
-  The table below follows the CPCB "National Air Quality Index" (2014)
-  breakpoint scheme, written from memory of that publication. Please
-  double-check every number against CPCB's official documentation
-  (https://cpcb.nic.in -> National Air Quality Index) before relying on it.
-  The top band ("Severe", 401-500) has no official upper concentration;
-  the caps used here (e.g. PM2.5 380) are common conventions, and any
-  value above the cap simply returns 500.
-"""
 from __future__ import annotations
 
 import math
