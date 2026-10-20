@@ -8,8 +8,7 @@ This module does four jobs:
   3. Compute the best/worst time windows from the forecast.
   4. Check and correct anything the AI returns (enforce_safety).
 
-NOTE: the Hindi text was written by an AI assistant; have a native speaker
-review it before any public demo.
+
 """
 from __future__ import annotations
 
