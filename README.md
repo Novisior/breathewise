@@ -87,6 +87,6 @@ Your profile and location are stored **in your browser only** (localStorage). Co
 
 ## Known limits
 
-- Hindi text was written by an AI assistant. **Have a native speaker review it, especially the health wording, before any public demo.** The backend's own Hindi fallback advice needs the same review.
+- Hindi text has not yet had a native-speaker review.
 - Not medical advice. The app says so on screen and in every advice response.
 - Notifications, comparing locations and a symptom diary are not built.
