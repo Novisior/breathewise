@@ -128,7 +128,7 @@ _MASK_ALIASES = {"n95": "n95", "kn95": "n95", "ffp2": "n95", "surgical": "surgic
 
 
 class AdviceCore(BaseModel):
-    """The JSON schema Claude must produce (validated, then safety-checked in code)."""
+    
     model_config = ConfigDict(extra="ignore")
 
     risk_level: Literal["Low", "Moderate", "High", "Very High"]
