@@ -121,5 +121,5 @@ async def geocode(
 
 @app.post("/api/advice", response_model=AdviceResponse)
 async def post_advice(req: AdviceRequest):
-    """Personalised advice. Uses Claude when a key is set, otherwise (or on any failure) the rules table."""
+    """Personalised advice.Uses the configured AI provider when a key is set…"""
     return await advice.get_advice(req)
