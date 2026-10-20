@@ -1,4 +1,4 @@
-"""Prompt + parsing helpers for the Claude advice call. Pure Python (testable offline)."""
+
 from __future__ import annotations
 
 import json
