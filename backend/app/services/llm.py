@@ -29,7 +29,7 @@ ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 
 # Defaults only: model names change often. Override with AI_MODEL in .env.
 DEFAULT_MODELS = {
-    "gemini": "gemini-3.5-flash",  # unverified guess: run check_ai.py to find a model your key can use
+    "gemini": "gemini-3.5-flash", 
     "groq": "llama-3.3-70b-versatile",
     "anthropic": "claude-sonnet-5-5",
     "openai_compatible": "",  # you must set AI_MODEL
